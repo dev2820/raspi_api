@@ -1,0 +1,10 @@
+version: 3
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - '3000:3000'
+  nodejs:
+    image: nodejs:latest
+    ports:
+      - '3001:3000'
