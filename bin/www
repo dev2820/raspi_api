@@ -8,7 +8,7 @@ const app = require('../app');
 const debug = require('debug')('myapp:server');
 const http = require('http');
 const cluster = require('cluster');
-const numCPUs = require('os').cpus().length;
+const numWorker = require('os').cpus().length/2;
 /**
  * Get port from environment and store in Express.
  */
@@ -16,7 +16,7 @@ const isMaster = cluster.isPrimary | cluster.isMaster;
 const port = normalizePort(process.env.PORT || '3000');
 
 if(isMaster) {
-    for(let i=0;i<numCPUs;i++) {
+    for(let i=0;i<numWorker;i++) {
         cluster.fork();
     }
 
