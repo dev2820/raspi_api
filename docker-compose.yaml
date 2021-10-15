@@ -4,14 +4,21 @@ services:
         image: nginx:latest
         container_name: proxy    
         ports:
-            - "3001:80"
+            - "3000:80"
         volumes:
             - ./nginx.conf:/etc/nginx/nginx.conf
         restart: "unless-stopped"
-    express:
+    express1:
         build:
             context: ./
         ports:
-            - "3000:3000"
+            - "3001:3000"
+        expose:
+            - "3306"
+    express2:
+        build:
+            context: ./
+        ports:
+            - "3002:3000"
         expose:
             - "3306"
