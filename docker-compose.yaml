@@ -11,14 +11,10 @@ services:
     express1:
         build:
             context: ./
-        ports:
-            - "3001:3000"
         expose:
             - "3306"
     express2:
         build:
             context: ./
-        ports:
-            - "3002:3000"
         expose:
             - "3306"
