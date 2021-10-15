@@ -16,7 +16,7 @@ router.get('/', async function(req, res, next) {
     }
     catch(err) {
           conn.release();
-          res.status(400).json({'message':'bad request'}); 
+          next(err);
     }
 });
 
