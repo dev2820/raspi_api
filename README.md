@@ -45,7 +45,7 @@ table 이름은 [raspi_monitor 프로젝트](https://github.com/dev2820/raspi_mo
 ## API
 GET /[라우터]?limit=[컬럼 수]&fields=[필드명,...]
 
-ex) GET /summary?limit=5&fields=date,cpu_thermal
+ex) GET /summary?limit=5&fields=date,cpu_thermal  
 summary_status 테이블에서 최근 5개 column의 date,cpu_thermal 필드값을 읽어옵니다.
 
 결과 예시
@@ -73,5 +73,5 @@ summary_status 테이블에서 최근 5개 column의 date,cpu_thermal 필드값�
     }
 ]
 ```
-ex) GET /summary?limit=10&fields=*
+ex) GET /summary?limit=10&fields=*  
 모든 필드의 값을 가져올 땐 `*`을 입력하면 됩니다.
