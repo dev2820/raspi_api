@@ -1,5 +1,5 @@
 FROM node:latest
-MAINTAINER gi jo Yang second28200@naver.com
+LABEL name="dev2820"
 
 # /app directory create
 RUN mkdir -p /app
