@@ -9,13 +9,11 @@ const debug = require('debug')('myapp:server');
 const http = require('http');
 const cluster = require('cluster');
 const numWorker = require('os').cpus().length/2;
-/**
- * Get port from environment and store in Express.
- */
-const isMaster = cluster.isPrimary | cluster.isMaster;
+
+const isPrimary = cluster.isPrimary || cluster.isMaster;
 const port = normalizePort(process.env.PORT || '3000');
 
-if(isMaster) {
+if(isPrimary) {
     for(let i=0;i<numWorker;i++) {
         cluster.fork();
     }
