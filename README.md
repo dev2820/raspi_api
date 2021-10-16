@@ -47,7 +47,9 @@ GET /[라우터]?limit=[컬럼 수]&fields=[필드명,...]
 
 ex) GET /summary?limit=5&fields=date,cpu_thermal
 summary_status 테이블에서 최근 5개 column의 date,cpu_thermal 필드값을 읽어옵니다.
+
 결과 예시
+```js
 [
     {
         "date": "2021-10-16T17:24:30.000Z",
@@ -70,6 +72,6 @@ summary_status 테이블에서 최근 5개 column의 date,cpu_thermal 필드값�
         "cpu_thermal": 36.024
     }
 ]
-
+```
 ex) GET /summary?limit=10&fields=*
 모든 필드의 값을 가져올 땐 `*`을 입력하면 됩니다.
