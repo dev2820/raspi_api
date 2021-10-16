@@ -1,5 +1,6 @@
 # raspi_api
 
+## description
 DB에서 값을 읽고 반환하는 간단한 서버입니다.
 express 서버 컨테이너 2개와 nginx 컨테이너 1개로 이루어져있습니다. docker-compose로 실행합니다.
 
@@ -7,6 +8,17 @@ express 서버 컨테이너 2개와 nginx 컨테이너 1개로 이루어져있�
 라즈베리파이 4B를 기준으로 구성도는 다음과 같습니다. 
 ![](/images/최종구성도.png)
 
+## 의존성 모듈
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^10.0.0",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "mysql2": "^2.3.0",
+    "nodemon": "^2.0.13"
+    
 ## 실행환경
 - ubuntu 20.04 LTS 기준
 - docker, docker-compose가 깔려있어야합니다.
