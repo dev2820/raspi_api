@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', async function(req, res, next) {
-    //json으로 송출
     const conn = res.locals.conn;
     const limit = req.query['limit'];
     const fields = req.query['fields'];

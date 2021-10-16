@@ -1,8 +1,7 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
 router.get('/', async function(req, res, next) {
-    //json으로 송출
     const conn = res.locals.conn;
     const limit = req.query['limit'];
     const fields = req.query['fields'];
@@ -15,8 +14,8 @@ router.get('/', async function(req, res, next) {
         res.json(row);
     }
     catch(err) {
-          conn.release();
-          next(err);
+        conn.release();
+        next(err);
     }
 });
 

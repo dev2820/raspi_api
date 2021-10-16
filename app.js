@@ -15,10 +15,6 @@ const ioRouter = require('./routes/io');
 const networkRouter = require('./routes/network');
 const app = express();
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
-
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -31,7 +27,6 @@ app.use('/cpu',addConnection,cpuRouter);
 app.use('/memory',addConnection,memoryRouter);
 app.use('/io',addConnection,ioRouter);
 app.use('/network',addConnection,networkRouter);
-
 
 // catch 404 and forward to error handler
 // 알 수 없는 쿼리는 404처리
