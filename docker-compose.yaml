@@ -11,10 +11,6 @@ services:
     express1:
         build:
             context: ./
-            #expose:
-            #- "3306"
     express2:
         build:
             context: ./
-            #expose:
-            #- "3306"
